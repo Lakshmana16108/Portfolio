@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional developer portfolio of Lakshmana Perumal - Computer Science Engineering student at National Engineering College. Web Development Intern at ICANIO Technologies. Specialized in Web Development, Software Development, and Problem Solving.">
+    <meta name="author" content="Lakshmana Perumal">
+    <meta name="theme-color" content="#030712">
+    <title>Lakshmana Perumal | Developer Workstation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme os-env">
+    <!-- Startup Loading Screen -->
+    <div id="startup-screen">
+        <div class="boot-container">
+            <div class="boot-header">LAKSHMANA_WORKSTATION BOOT_LOADER v2.0.26</div>
+            <div class="boot-terminal" id="boot-terminal"></div>
+            <div class="boot-progress-container">
+                <div class="boot-progress-bar" id="boot-progress-bar"></div>
+            </div>
+            <div class="boot-status">BOOT_STATE: <span id="boot-percentage">0%</span></div>
+        </div>
+    </div>
+
+    <!-- Ambient glowing backgrounds (wallpaper layer) -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="cyber-grid-overlay"></div>
+
+    <!-- Desktop Area -->
+    <div id="desktop">
+        <!-- Interactive Blockchain Node Network Wallpaper -->
+        <canvas id="hero-canvas"></canvas>
+
+        <!-- Desktop Columns Layout -->
+        <div class="desktop-layout-container">
+            <!-- Left Side: Modern Application Cards Grid -->
+            <div class="desktop-grid" id="desktop-grid">
+                <!-- Profile.exe -->
+                <div class="app-card" data-app="profile">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Profile.exe</h3>
+                        <p class="app-card-desc">Developer bio, identity protocols, and academic focus parameters.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Profile app">RUN_APP</button>
+                </div>
+
+                <!-- Skills.exe -->
+                <div class="app-card" data-app="skills">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-cyan">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Skills.exe</h3>
+                        <p class="app-card-desc">Technical competencies, languages, backend, and databases.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Skills app">RUN_APP</button>
+                </div>
+
+                <!-- Projects.exe -->
+                <div class="app-card" data-app="projects">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Projects.exe</h3>
+                        <p class="app-card-desc">Featured creations, relational databases, and Spring applications.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Projects app">RUN_APP</button>
+                </div>
+
+                <!-- Experience.exe -->
+                <div class="app-card" data-app="experience">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-indigo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Experience.exe</h3>
+                        <p class="app-card-desc">Professional work history and web development internships.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Experience app">RUN_APP</button>
+                </div>
+
+                <!-- Education.exe -->
+                <div class="app-card" data-app="education">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-emerald">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Education.exe</h3>
+                        <p class="app-card-desc">Academic timeline, schooling records, and core CSE syllabus.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Education app">RUN_APP</button>
+                </div>
+
+                <!-- Blockchain.exe -->
+                <div class="app-card" data-app="blockchain">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-cyan">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Blockchain.exe</h3>
+                        <p class="app-card-desc">Web3 dashboard, Solidity smart contracts, and learning path nodes.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Blockchain app">RUN_APP</button>
+                </div>
+
+                <!-- Roadmap.exe -->
+                <div class="app-card" data-app="roadmap">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 22 22 22 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Roadmap.exe</h3>
+                        <p class="app-card-desc">Future learning milestones, EVM structures, and auditing goals.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Roadmap app">RUN_APP</button>
+                </div>
+
+                <!-- Achievements.exe -->
+                <div class="app-card" data-app="achievements">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-gold">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Achievements.exe</h3>
+                        <p class="app-card-desc">NPTEL certifications, academic milestones, and awards.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Achievements app">RUN_APP</button>
+                </div>
+
+                <!-- Resume.pdf -->
+                <div class="app-card" data-app="resume">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-red">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <polyline points="9 15 12 18 15 15"></polyline>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Resume.pdf</h3>
+                        <p class="app-card-desc">Comprehensive curriculum vitae, formatted and ready for download.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Resume app">RUN_APP</button>
+                </div>
+
+                <!-- Contact.exe -->
+                <div class="app-card" data-app="contact">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Contact.exe</h3>
+                        <p class="app-card-desc">SMTP secure mailing portal, social networks, and links.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Contact app">RUN_APP</button>
+                </div>
+
+                <!-- Terminal.exe -->
+                <div class="app-card" data-app="terminal">
+                    <div class="app-card-header">
+                        <div class="app-card-icon icon-gradient-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                        </div>
+                        <span class="app-card-dot status-active" title="System Ready"></span>
+                    </div>
+                    <div class="app-card-body">
+                        <h3 class="app-card-title">Terminal.exe</h3>
+                        <p class="app-card-desc">Interactive developer command-line terminal shell prompt.</p>
+                    </div>
+                    <button class="app-card-btn" aria-label="Launch Terminal app">RUN_APP</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Dynamic Widgets Panel -->
+            <div class="desktop-widgets-panel">
+                <!-- Clock & Hardware Monitor Widget -->
+                <div class="widget-card card-glow" id="widget-hardware">
+                    <div class="widget-header-cyber">
+                        <span class="widget-header-title">❖ SYS_MONITOR</span>
+                        <span class="widget-pulse-dot"></span>
+                    </div>
+                    <div class="widget-time-display">
+                        <div class="widget-time" id="widget-time">00:00:00</div>
+                        <div class="widget-date" id="widget-date">Wednesday, Jun 24, 2026</div>
+                    </div>
+                    <div class="hardware-meters">
+                        <div class="meter-group">
+                            <div class="meter-info">
+                                <span>CPU_LOAD</span>
+                                <span id="cpu-value">18%</span>
+                            </div>
+                            <div class="meter-bar-bg">
+                                <div class="meter-bar-fill fill-cyan" id="cpu-bar" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                        <div class="meter-group">
+                            <div class="meter-info">
+                                <span>MEM_USAGE</span>
+                                <span id="mem-value">42%</span>
+                            </div>
+                            <div class="meter-bar-bg">
+                                <div class="meter-bar-fill fill-pink" id="mem-bar" style="width: 42%;"></div>
+                            </div>
+                        </div>
+                        <div class="meter-group">
+                            <div class="meter-info">
+                                <span>BLOCK_HEIGHT (SYNC)</span>
+                                <span id="block-value">#8,940,195</span>
+                            </div>
+                            <div class="meter-bar-bg">
+                                <div class="meter-bar-fill fill-green" id="block-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Mission Panel -->
+                <div class="widget-card card-glow" id="widget-mission">
+                    <div class="widget-header-cyber">
+                        <span class="widget-header-title">⚡ CURRENT_OBJECTIVE</span>
+                        <span class="widget-badge">ACTIVE</span>
+                    </div>
+                    <div class="mission-content">
+                        <h4 class="mission-primary">Master Solidity &amp; Web3 Smart Contracts</h4>
+                        <p class="mission-desc">Build decentralized protocols, audit gas efficiencies, and study EVM
+                            execution limits.</p>
+                        <div class="mission-checklist">
+                            <div class="checklist-item done">
+                                <span class="chk-box">✓</span>
+                                <span class="chk-text">Complete ICANIO Web Development Intern</span>
+                            </div>
+                            <div class="checklist-item active">
+                                <span class="chk-box">⚡</span>
+                                <span class="chk-text">Analyze Solidity Compiler (EVM Assembly)</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="chk-box">☐</span>
+                                <span class="chk-text">Build Relay Audited Escrow Smart Contract</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Activity Logs Widget -->
+                <div class="widget-card card-glow" id="widget-logs">
+                    <div class="widget-header-cyber">
+                        <span class="widget-header-title">🐚 CORE_ACTIVITY_LOGS</span>
+                        <span class="widget-badge badge-green">ONLINE</span>
+                    </div>
+                    <div class="logs-stream-container">
+                        <div class="logs-stream" id="desktop-logs-stream">
+                            <div class="log-row">[INFO] Mount dev/sda1 successful.</div>
+                            <div class="log-row">[SECURE] Port 8000 firewall listening.</div>
+                            <div class="log-row">[USER] Recruiter connection established.</div>
+                            <div class="log-row">[NOTIF] Type 'help' in Terminal.exe.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Windows Container -->
+        <div id="windows-container">
+
+            <!-- WINDOW: Profile.exe (About Me) -->
+            <div class="window" id="win-profile" data-app="profile"
+                style="width: 850px; height: 550px; left: 8%; top: 8%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">👤</span>
+                        <span class="window-title-text">Profile.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="win-hero-container">
+                        <div class="hero-content">
+                            <div class="badge-container">
+                                <span class="status-badge pulse-badge">
+                                    <span class="pulse-dot"></span> Web3 Dev Workstation
+                                </span>
+                            </div>
+                            <h1 class="hero-title"><span class="gradient-text">Lakshmana Perumal</span></h1>
+                            <h2 class="hero-subtitle">Aspiring Blockchain Developer</h2>
+                            <h3 class="hero-identity-sub">Computer Science Engineering Student | Full Stack Learner |
+                                Web3 Enthusiast</h3>
+                            <p class="hero-description">
+                                Driven by curiosity and a desire to build, I dedicate my engineering focus to writing
+                                smart contracts, constructing design-driven frontends, and designing scalable backend
+                                databases.
+                            </p>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="blob-frame">
+                                <div class="profile-pic-container">
+                                    <img src="profile.jpg" alt="Lakshmana Perumal" class="profile-pic">
+                                </div>
+                                <div class="decorative-ring ring-1"></div>
+                                <div class="decorative-ring ring-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="win-separator">
+
+                    <div class="about-grid">
+                        <div class="about-text-card">
+                            <h3 class="inner-header-cyber">ABOUT_ME_PROTOCOL</h3>
+                            <p class="about-bio">
+                                I am a highly motivated <strong>Computer Science Engineering student</strong> at
+                                <strong>National Engineering College</strong>, Tamil Nadu. Fascinated by decentralized
+                                ledger architectures and full-stack engineering, I dedicate my learning curve to
+                                researching Solidity smart contracts, backend integration frameworks (like Spring Boot),
+                                and responsive UI structures.
+                            </p>
+                            <p class="about-bio">
+                                My approach combines a strong foundation in core computer science principles (refined
+                                using languages like C, C++, Java, and Python) with hands-on practice. I enjoy
+                                translating complex business logic into gas-optimized smart contracts and reliable,
+                                production-ready web servers.
+                            </p>
+                            <p class="about-bio font-highlight">
+                                🚀 Passionate about contributing to decentralized protocols, refining Web3 products, and
+                                collaborating in real-world engineering environments to solve complex problems and make
+                                a measurable impact.
+                            </p>
+                        </div>
+
+                        <div class="about-stats-container">
+                            <div class="stat-card card-glow">
+                                <div class="stat-icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="gradient-svg-icon">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                                    </svg>
+                                </div>
+                                <h3>Academic Track</h3>
+                                <p>B.E. Computer Science and Engineering</p>
+                                <span class="stat-label">National Engineering College</span>
+                            </div>
+
+                            <div class="stat-card card-glow">
+                                <div class="stat-icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="gradient-svg-icon">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                                <h3>Specialization</h3>
+                                <p>Smart Contracts, Web3 &amp; Full Stack APIs</p>
+                                <span class="stat-label">Solid Foundation &amp; Quick Learner</span>
+                            </div>
+
+                            <div class="stat-card card-glow">
+                                <div class="stat-icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="gradient-svg-icon">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                </div>
+                                <h3>Aspiration</h3>
+                                <p>Blockchain Engineer / Web3 Developer</p>
+                                <span class="stat-label">Ready to construct and deploy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Skills.exe -->
+            <div class="window" id="win-skills" data-app="skills"
+                style="width: 800px; height: 500px; left: 12%; top: 12%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">💻</span>
+                        <span class="window-title-text">Skills.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">My Skill Set</span>
+                        <h2 class="section-title">Technical <span class="gradient-text">Competencies</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="skills-wrapper">
+                        <!-- Core Programming Languages -->
+                        <div class="skills-category-card">
+                            <div class="category-header">
+                                <div class="cat-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
+                                </div>
+                                <h3>Programming Languages</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot lang-c"></span>
+                                    <span>C</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot lang-cpp"></span>
+                                    <span>C++</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot lang-java"></span>
+                                    <span>Java</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot lang-python"></span>
+                                    <span>Python</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web & Backend Development -->
+                        <div class="skills-category-card">
+                            <div class="category-header">
+                                <div class="cat-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
+                                    </svg>
+                                </div>
+                                <h3>Web &amp; Backend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot web-html"></span>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot web-css"></span>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot web-js"></span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot back-springboot"></span>
+                                    <span>Spring Boot</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Databases & Systems -->
+                        <div class="skills-category-card">
+                            <div class="category-header">
+                                <div class="cat-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+                                    </svg>
+                                </div>
+                                <h3>Databases &amp; Systems</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="skill-badge hover-glow-item">
+                                    <span class="skill-dot db-sql"></span>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blockchain & Emerging Tech -->
+                        <div class="skills-category-card flag-learning-card">
+                            <div class="category-header">
+                                <div class="cat-icon-box learning-glow-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                </div>
+                                <h3>Blockchain &amp; Web3</h3>
+                            </div>
+                            <div class="skills-list">
+                                <div class="skill-badge blockchain-special hover-glow-item">
+                                    <div class="badge-status-ring"></div>
+                                    <span class="skill-dot emerging-blockchain"></span>
+                                    <span>Solidity Smart Contracts</span>
+                                    <span class="learning-tag">Focus</span>
+                                </div>
+                                <div class="skill-badge blockchain-special hover-glow-item">
+                                    <div class="badge-status-ring"></div>
+                                    <span class="skill-dot emerging-blockchain"></span>
+                                    <span>Web3 DApps Fundamentals</span>
+                                    <span class="learning-tag">Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Projects.exe -->
+            <div class="window" id="win-projects" data-app="projects"
+                style="width: 900px; height: 550px; left: 16%; top: 10%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">📂</span>
+                        <span class="window-title-text">Projects.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">My Creations</span>
+                        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Project 1: Spring Boot Inventory Management -->
+                        <article class="project-card card-glow">
+                            <div class="project-visual bg-gradient-spring">
+                                <div class="project-visual-overlay"></div>
+                                <div class="project-screen-mockup">
+                                    <div class="mockup-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="mockup-url">localhost:8080/dashboard</span>
+                                    </div>
+                                    <div class="mockup-body spring-mockup">
+                                        <div class="mockup-sidebar"></div>
+                                        <div class="mockup-content">
+                                            <div class="mockup-card-mini">Stock Overview</div>
+                                            <div class="mockup-list-mini">
+                                                <div class="mockup-item">Product A - In Stock</div>
+                                                <div class="mockup-item">Product B - Low Stock</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="project-category-tag">Web Application</span>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">Inventory Management System</h3>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Thymeleaf</span>
+                                </div>
+                                <p class="project-desc">
+                                    A premium web-based inventory management platform with database persistence.
+                                    Implements robust CRUD operations, real-time stock alert thresholds, structured
+                                    logging, relational schema modeling, and safe validation layers.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Lakshmana16108" target="_blank"
+                                        rel="noopener noreferrer" class="btn-project-link">
+                                        <span>Code Base</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 2: Console-Based Inventory Management -->
+                        <article class="project-card card-glow">
+                            <div class="project-visual bg-gradient-console">
+                                <div class="project-visual-overlay"></div>
+                                <div class="project-screen-mockup">
+                                    <div class="mockup-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="mockup-url">Terminal (Interactive Console)</span>
+                                    </div>
+                                    <div class="mockup-body terminal-mockup">
+                                        <div class="terminal-line"><span class="term-prompt">$</span> java
+                                            InventorySystem</div>
+                                        <div class="terminal-line text-success">=== INVENTORY SYSTEM ===</div>
+                                        <div class="terminal-line">1. Add New Record</div>
+                                        <div class="terminal-line">2. Check Stock Level</div>
+                                        <div class="terminal-line"><span class="term-prompt">&gt;</span> Selecting opt
+                                            2...</div>
+                                    </div>
+                                </div>
+                                <span class="project-category-tag">Console App</span>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">Inventory System (Console-Based)</h3>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Data Structures</span>
+                                    <span class="tech-tag">CLI</span>
+                                </div>
+                                <p class="project-desc">
+                                    A highly optimized command-line application built to handle low-level inventory
+                                    tracking and record bookkeeping. Focuses on core data structures, quick search
+                                    algorithms, transactional stability, and input validation filters.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Lakshmana16108" target="_blank"
+                                        rel="noopener noreferrer" class="btn-project-link">
+                                        <span>Code Base</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: Zoo Management System -->
+                        <article class="project-card card-glow">
+                            <div class="project-visual bg-gradient-cpp">
+                                <div class="project-visual-overlay"></div>
+                                <div class="project-screen-mockup">
+                                    <div class="mockup-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="mockup-url">ZooManager.cpp</span>
+                                    </div>
+                                    <div class="mockup-body cpp-mockup">
+                                        <div class="terminal-line"><span class="term-keyword">class</span> <span
+                                                class="term-class">Animal</span> {</div>
+                                        <div class="terminal-line indent"><span class="term-keyword">virtual void</span>
+                                            makeSound() = 0;</div>
+                                        <div class="terminal-line">};</div>
+                                        <div class="terminal-line"><span class="term-keyword">class</span> <span
+                                                class="term-class">Lion</span> : <span
+                                                class="term-keyword">public</span> <span
+                                                class="term-class">Animal</span> { ... };</div>
+                                    </div>
+                                </div>
+                                <span class="project-category-tag">C++ / OOP</span>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">Zoo Management System</h3>
+                                <div class="project-stack">
+                                    <span class="tech-tag">C++</span>
+                                    <span class="tech-tag">OOP Concepts</span>
+                                    <span class="tech-tag">Memory Mgmt</span>
+                                </div>
+                                <p class="project-desc">
+                                    A comprehensive zoo administration system engineered to model real-world records.
+                                    Adheres strictly to Object-Oriented Design principles (Inheritance, Polymorphism,
+                                    Encapsulation) with proper pointer handling and custom memory buffers.
+                                </p>
+                                <div class="project-links">
+                                    <a href="https://github.com/Lakshmana16108" target="_blank"
+                                        rel="noopener noreferrer" class="btn-project-link">
+                                        <span>Code Base</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Experience.exe -->
+            <div class="window" id="win-experience" data-app="experience"
+                style="width: 750px; height: 480px; left: 10%; top: 20%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">💼</span>
+                        <span class="window-title-text">Experience.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Professional Experience</span>
+                        <h2 class="section-title">Work <span class="gradient-text">History</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="timeline-container">
+                        <div class="timeline-line-decor"></div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge-pulse">
+                                <div class="inner-pulse"></div>
+                            </div>
+                            <div class="timeline-card card-glow">
+                                <span class="timeline-duration">2 June 2026 – 15 June 2026</span>
+                                <h3 class="degree-title">Web Development Intern</h3>
+                                <h4 class="dept-title">ICANIO Technologies</h4>
+                                <p class="college-title">Tirunelveli, Tamil Nadu</p>
+                                <p class="timeline-desc">
+                                    Actively engaged in full-stack web and backend engineering, designing responsive
+                                    layout systems, crafting dynamic application features, and collaborating closely
+                                    with developers and mentors to deliver robust, high-quality, production-ready code.
+                                </p>
+                                <div class="college-features">
+                                    <span class="coll-feat">⚡ React &amp; Modern JS</span>
+                                    <span class="coll-feat">💻 UI/UX Responsive Engineering</span>
+                                    <span class="coll-feat">⚙️ REST API Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Education.exe -->
+            <div class="window" id="win-education" data-app="education"
+                style="width: 750px; height: 480px; left: 12%; top: 22%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">🎓</span>
+                        <span class="window-title-text">Education.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Academic Journey</span>
+                        <h2 class="section-title">Education <span class="gradient-text">History</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="timeline-container">
+                        <div class="timeline-line-decor"></div>
+
+                        <!-- NEC -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge-pulse">
+                                <div class="inner-pulse"></div>
+                            </div>
+                            <div class="timeline-card card-glow">
+                                <span class="timeline-duration">2024 - 2028 (Currently Pursuing)</span>
+                                <h3 class="degree-title">Bachelor of Engineering (B.E.)</h3>
+                                <h4 class="dept-title">Computer Science and Engineering</h4>
+                                <p class="college-title">National Engineering College</p>
+                                <p class="timeline-desc">
+                                    Exploring structural computer science principles including Data Structures &amp;
+                                    Algorithms, Object-Oriented Analysis and Design, Database Management Systems, System
+                                    Architecture, and Software Engineering methodologies. Actively building hands-on
+                                    academic systems and leading tech projects.
+                                </p>
+                                <div class="college-features">
+                                    <span class="coll-feat">🎓 CSE Core Syllabus</span>
+                                    <span class="coll-feat">⚡ Hands-on Labs</span>
+                                    <span class="coll-feat">🌟 Tech Clubs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12th Standard -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge-pulse">
+                                <div class="inner-pulse"></div>
+                            </div>
+                            <div class="timeline-card card-glow">
+                                <span class="timeline-duration">Year of Passing: 2024</span>
+                                <h3 class="degree-title">12th Standard – Higher Secondary</h3>
+                                <h4 class="dept-title">Computer Science Group</h4>
+                                <p class="college-title">Sri Jayendra Silver Jubilee School, Tirunelveli</p>
+                                <p class="timeline-desc">
+                                    Acquired fundamental competencies in science and high-level programming logic.
+                                    Formulated core mathematical skills and computational algorithms, establishing the
+                                    foundation for structural computer science.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 10th Standard -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge-pulse">
+                                <div class="inner-pulse"></div>
+                            </div>
+                            <div class="timeline-card card-glow">
+                                <span class="timeline-duration">Year of Passing: 2022</span>
+                                <h3 class="degree-title">10th Standard – Secondary Education</h3>
+                                <h4 class="dept-title">General Curriculum</h4>
+                                <p class="college-title">Sri Jayendra Golden Jubilee School, Tirunelveli</p>
+                                <p class="timeline-desc">
+                                    Completed basic educational protocols with distinction in mathematics, science, and
+                                    analytic reasoning fields, setting up the pathway for advanced science studies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Blockchain.exe (Web3 Dashboard) -->
+            <div class="window" id="win-blockchain" data-app="blockchain"
+                style="width: 850px; height: 530px; left: 14%; top: 12%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">⛓️</span>
+                        <span class="window-title-text">Blockchain.exe - Web3 Dashboard</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Web3 Protocol</span>
+                        <h2 class="section-title">Blockchain <span class="gradient-text">Dashboard</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="blockchain-dashboard-grid">
+                        <div class="blockchain-stats-card card-glow">
+                            <div class="bc-stat-item">
+                                <span class="bc-label">CURRENT_STATUS:</span>
+                                <span class="bc-val text-green glow-green">Learning Blockchain Development</span>
+                            </div>
+                            <div class="bc-stat-item">
+                                <span class="bc-label">CURRENT_FOCUS:</span>
+                                <span class="bc-val text-cyan glow-cyan">Solidity Smart Contracts</span>
+                            </div>
+                            <div class="bc-stat-item">
+                                <span class="bc-label">FUTURE_GOALS:</span>
+                                <span class="bc-val text-purple">DApps Dev | Web3 Architecture | Blockchain
+                                    Engineer</span>
+                            </div>
+                        </div>
+
+                        <div class="blockchain-progress-stepper card-glow">
+                            <h3 class="inner-header-cyber">LEARNING_PATH_Stepper</h3>
+                            <div class="progress-stepper-line">
+                                <div class="step-node completed" data-step="1">
+                                    <div class="step-circle">✓</div>
+                                    <span class="step-label">Programming</span>
+                                    <div class="step-tooltip">C, C++, Java, Python fundamentals</div>
+                                </div>
+                                <div class="step-node completed" data-step="2">
+                                    <div class="step-circle">✓</div>
+                                    <span class="step-label">Web Dev</span>
+                                    <div class="step-tooltip">HTML, CSS, JS, UI Responsive layouts</div>
+                                </div>
+                                <div class="step-node completed" data-step="3">
+                                    <div class="step-circle">✓</div>
+                                    <span class="step-label">Full Stack</span>
+                                    <div class="step-tooltip">Spring Boot, REST APIs, Relational SQL</div>
+                                </div>
+                                <div class="step-node active" data-step="4">
+                                    <div class="step-circle">⚡</div>
+                                    <span class="step-label">Blockchain</span>
+                                    <div class="step-tooltip">Solidity, Smart Contracts, EVM execution</div>
+                                </div>
+                                <div class="step-node upcoming" data-step="5">
+                                    <div class="step-circle">☐</div>
+                                    <span class="step-label">Web3</span>
+                                    <div class="step-tooltip">Decentralized Apps, auditing, DeFi protocols</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Roadmap.exe -->
+            <div class="window" id="win-roadmap" data-app="roadmap"
+                style="width: 800px; height: 500px; left: 16%; top: 14%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">🗺️</span>
+                        <span class="window-title-text">Roadmap.exe - Learning Journey</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Future Horizons</span>
+                        <h2 class="section-title">Web3 <span class="gradient-text">Learning Roadmap</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="roadmap-timeline">
+                        <div class="roadmap-item done">
+                            <div class="roadmap-badge">COMPLETED</div>
+                            <div class="roadmap-card card-glow">
+                                <h3>Phase 1: Engineering &amp; Programming Core</h3>
+                                <p>Mastering procedural logic in C, OOP frameworks in C++ and Java, scripting in Python,
+                                    and structural data storage with relational SQL. Completed academic computer science
+                                    frameworks.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item done">
+                            <div class="roadmap-badge">COMPLETED</div>
+                            <div class="roadmap-card card-glow">
+                                <h3>Phase 2: Full-Stack Web Systems</h3>
+                                <p>Building design-driven frontends with HTML/CSS/JavaScript and backend web API
+                                    frameworks using Spring Boot. Designing secure validation layers and database
+                                    persistence. Web Dev Intern at ICANIO Technologies.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item active">
+                            <div class="roadmap-badge badge-cyan">IN PROGRESS</div>
+                            <div class="roadmap-card card-glow">
+                                <h3>Phase 3: Solidity &amp; Smart Contract Security</h3>
+                                <p>Focusing on smart contract programming with Solidity, understanding the Ethereum
+                                    Virtual Machine (EVM) assembly, auditing gas consumption, and implementing secure
+                                    coding patterns to prevent reentrancy and integer overflows.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-badge badge-purple">UP NEXT</div>
+                            <div class="roadmap-card card-glow">
+                                <h3>Phase 4: DApps &amp; Web3 Protocols</h3>
+                                <p>Integrating smart contracts with client-side interfaces using libraries like
+                                    Ethers.js, wagmi, and viem. Formulating test beds with Hardhat and Foundry.
+                                    Developing decentralized voting, escrow, and token registries.</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-badge badge-purple">FUTURE</div>
+                            <div class="roadmap-card card-glow">
+                                <h3>Phase 5: Advanced Blockchain Architectures</h3>
+                                <p>Exploring Layer 2 scaling methods (Rollups, Optimism, Arbitrum), cross-chain
+                                    messaging solutions (CCIP), and automated smart contract verification frameworks
+                                    (Slither, Mythril) to become a high-caliber Blockchain Engineer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Achievements.exe -->
+            <div class="window" id="win-achievements" data-app="achievements"
+                style="width: 850px; height: 530px; left: 18%; top: 12%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">🏆</span>
+                        <span class="window-title-text">Achievements.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Academic &amp; Professional</span>
+                        <h2 class="section-title">Milestones &amp; <span class="gradient-text">Achievements</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="achievements-dashboard">
+                        <!-- NPTEL Certifications -->
+                        <div class="achievement-category-card card-glow">
+                            <div class="ach-cat-header">
+                                <span class="ach-cat-icon">📜</span>
+                                <h3>NPTEL Certifications</h3>
+                            </div>
+                            <div class="ach-cat-list">
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge">ELITE</div>
+                                    <h4>The Joy of Computing Using Python</h4>
+                                    <p>Mastered advanced programming loops, search algorithms, data structures, and
+                                        computational patterns in Python.</p>
+                                </div>
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge">ELITE</div>
+                                    <h4>Cloud Computing</h4>
+                                    <p>Verified competencies in cloud architectures, hypervisors, resource
+                                        virtualization, and load balancers.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Internship Experience -->
+                        <div class="achievement-category-card card-glow">
+                            <div class="ach-cat-header">
+                                <span class="ach-cat-icon">💼</span>
+                                <h3>Internship Experience</h3>
+                            </div>
+                            <div class="ach-cat-list">
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge badge-cyan">ICANIO</div>
+                                    <h4>Web Development Intern</h4>
+                                    <p>Collaborated at ICANIO Technologies, Tirunelveli. Built responsive frontends and
+                                        integrated robust backend database APIs to deliver production-ready code
+                                        modules.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Major Projects -->
+                        <div class="achievement-category-card card-glow">
+                            <div class="ach-cat-header">
+                                <span class="ach-cat-icon">📂</span>
+                                <h3>Major Projects</h3>
+                            </div>
+                            <div class="ach-cat-list">
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge badge-purple">JAVA/SQL</div>
+                                    <h4>Inventory Management Systems</h4>
+                                    <p>Engineered a fully functional Spring Boot database-driven tracker, alongside an
+                                        optimized command-line CLI tool emphasizing core data algorithms.</p>
+                                </div>
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge badge-purple">C++</div>
+                                    <h4>Zoo Management Engine</h4>
+                                    <p>Designed a rigorous object-oriented database simulator in C++ showing complex
+                                        inheritance, polymorphism, and buffer handling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Milestones -->
+                        <div class="achievement-category-card card-glow">
+                            <div class="ach-cat-header">
+                                <span class="ach-cat-icon">🎓</span>
+                                <h3>Academic Milestones</h3>
+                            </div>
+                            <div class="ach-cat-list">
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge">AWARD</div>
+                                    <h4>2nd Prize — WORST UI Design</h4>
+                                    <p>Coimbatore Institute of Technology. Demonstrated deep knowledge of UX guidelines
+                                        by constructing sophisticated anti-patterns in UI layouts.</p>
+                                </div>
+                                <div class="ach-item-box">
+                                    <div class="ach-item-badge">B.E. CSE</div>
+                                    <h4>National Engineering College</h4>
+                                    <p>Maintained high academic standing in core CSE modules including algorithms,
+                                        databases, system structures, and software engineering.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Certificates.pdf (NPTEL and Awards in document layout) -->
+            <div class="window" id="win-certifications" data-app="certifications"
+                style="width: 850px; height: 520px; left: 16%; top: 18%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">📜</span>
+                        <span class="window-title-text">Certificates.pdf - Document Viewer</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn pdf-download-btn" title="Download Certificates"
+                            aria-label="Download Document">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body pdf-document-theme">
+                    <div class="pdf-viewer-bar">
+                        <div class="pdf-controls">
+                            <span class="pdf-page-indicator">Page 1 of 1</span>
+                            <span class="pdf-zoom">100%</span>
+                            <div class="pdf-file-info">Certificates_and_Achievements.pdf</div>
+                        </div>
+                    </div>
+
+                    <div class="pdf-page-sheet">
+                        <div class="section-header">
+                            <span class="section-tagline">Accomplishments</span>
+                            <h2 class="section-title">Certifications &amp; <span
+                                    class="gradient-text">Achievements</span></h2>
+                            <div class="header-line"></div>
+                        </div>
+
+                        <!-- Filter Controls -->
+                        <div class="filter-controls">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="certification">Certifications</button>
+                            <button class="filter-btn" data-filter="achievement">Achievements</button>
+                        </div>
+
+                        <div class="certs-grid">
+                            <!-- Achievement 1: WORST UI Design Competition -->
+                            <div class="cert-card card-glow" data-type="achievement">
+                                <div class="cert-icon-wrapper prize-glow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="icon-award">
+                                        <circle cx="12" cy="8" r="7" />
+                                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                                    </svg>
+                                </div>
+                                <div class="cert-info">
+                                    <span class="cert-badge achievement-badge">Award Winner</span>
+                                    <h3 class="cert-title">2nd Prize — WORST UI Design Competition</h3>
+                                    <h4 class="cert-issuer">Coimbatore Institute of Technology</h4>
+                                    <p class="cert-desc">
+                                        Secured the second runner-up position in a unique UI design challenge.
+                                        Demonstrates core understanding of user experience principles, design
+                                        guidelines, and human-computer interaction by successfully identifying and
+                                        constructing sophisticated UX anti-patterns.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Certification 1: Joy of Computing Using Python (NPTEL) -->
+                            <div class="cert-card card-glow" data-type="certification">
+                                <div class="cert-icon-wrapper nptel-glow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round" class="icon-python">
+                                        <path
+                                            d="M12 2H9a7 7 0 0 0-7 7v3a7 7 0 0 0 7 7h3v-2H9a5 5 0 0 1-5-5V9a5 5 0 0 1 5-5h3V2z" />
+                                        <path
+                                            d="M12 22h3a7 7 0 0 0 7-7v-3a7 7 0 0 0-7-7h-3v2h3a5 5 0 0 1 5 5v3a5 5 0 0 1-5 5h-3v2z" />
+                                        <circle cx="7.5" cy="7.5" r="1" />
+                                        <circle cx="16.5" cy="16.5" r="1" />
+                                    </svg>
+                                </div>
+                                <div class="cert-info">
+                                    <span class="cert-badge elite-badge">Elite / NPTEL</span>
+                                    <h3 class="cert-title">The Joy of Computing Using Python</h3>
+                                    <h4 class="cert-issuer">National Programme on Technology Enhanced Learning</h4>
+                                    <p class="cert-desc">
+                                        Finished in the elite category, mastering python programming fundamentals, data
+                                        structures, algorithms, search techniques, and standard computing paradigms.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Certification 2: Introduction to C (Sololearn) -->
+                            <div class="cert-card card-glow" data-type="certification">
+                                <div class="cert-icon-wrapper sololearn-glow">
+                                    <span class="cert-text-icon">C</span>
+                                </div>
+                                <div class="cert-info">
+                                    <span class="cert-badge basic-badge">Sololearn</span>
+                                    <h3 class="cert-title">Introduction to C</h3>
+                                    <h4 class="cert-issuer">Sololearn</h4>
+                                    <p class="cert-desc">
+                                        Certified in procedural C programming, focusing on logic, pointers, memory
+                                        allocation, arrays, structural types, and file streams.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Certification 3: Cloud Computing (NPTEL) -->
+                            <div class="cert-card card-glow" data-type="certification">
+                                <div class="cert-icon-wrapper cloud-glow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="icon-cloud">
+                                        <path
+                                            d="M17.5 19A3.5 3.5 0 0 0 21 15.5c0-2.79-2.54-4.5-5-4.5-.42-1.03-1.3-1.88-2.35-2.3C12.8 7.37 11.23 7 9.5 7A5.5 5.5 0 0 0 4 12.5C1.86 12.5 0 14.24 0 16.5A3.5 3.5 0 0 0 3.5 20h14z" />
+                                    </svg>
+                                </div>
+                                <div class="cert-info">
+                                    <span class="cert-badge elite-badge">Elite / NPTEL</span>
+                                    <h3 class="cert-title">Cloud Computing</h3>
+                                    <h4 class="cert-issuer">National Programme on Technology Enhanced Learning</h4>
+                                    <p class="cert-desc">
+                                        Verified expertise in Cloud Systems architecture, virtualization layers,
+                                        storage, resource management, scalability, and virtualization platforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Contact.exe -->
+            <div class="window" id="win-contact" data-app="contact"
+                style="width: 850px; height: 540px; left: 14%; top: 14%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">✉️</span>
+                        <span class="window-title-text">Contact.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="section-header">
+                        <span class="section-tagline">Get In Touch</span>
+                        <h2 class="section-title">Let's Connect <span class="gradient-text">Together</span></h2>
+                        <div class="header-line"></div>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-info-panel">
+                            <div class="info-intro">
+                                <h3>Let's build something remarkable!</h3>
+                                <p>I am open to discussions regarding internship options, joint software development
+                                    collaborations, or blockchain explorations. Reach out using any of the paths below.
+                                </p>
+                            </div>
+
+                            <div class="info-items">
+                                <!-- GitHub Link -->
+                                <a href="https://github.com/Lakshmana16108" target="_blank" rel="noopener noreferrer"
+                                    class="info-item-link card-glow">
+                                    <div class="item-icon-box icon-github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <span class="item-label">GitHub Profile</span>
+                                        <span class="item-val">github.com/Lakshmana16108</span>
+                                    </div>
+                                    <span class="link-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="9 18 15 12 9 6" />
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <!-- LinkedIn Link -->
+                                <a href="https://www.linkedin.com/in/m-lakshmana-p-24320b300" target="_blank"
+                                    rel="noopener noreferrer" class="info-item-link card-glow">
+                                    <div class="item-icon-box icon-linkedin">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                            <rect x="2" y="9" width="4" height="12" />
+                                            <circle cx="4" cy="4" r="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <span class="item-label">LinkedIn</span>
+                                        <span class="item-val">linkedin.com/in/m-lakshmana-p-24320b300</span>
+                                    </div>
+                                    <span class="link-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="9 18 15 12 9 6" />
+                                        </svg>
+                                    </span>
+                                </a>
+
+                                <!-- Email Link -->
+                                <a href="mailto:perumalmlakshmana5@gmail.com" class="info-item-link card-glow">
+                                    <div class="item-icon-box icon-email">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <polyline points="22,6 12,13 2,6" />
+                                        </svg>
+                                    </div>
+                                    <div class="item-content">
+                                        <span class="item-label">Email Address</span>
+                                        <span class="item-val">perumalmlakshmana5@gmail.com</span>
+                                    </div>
+                                    <span class="link-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="9 18 15 12 9 6" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-panel">
+                            <form id="contactForm" class="contact-form card-glow">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="formName">Full Name</label>
+                                        <input type="text" id="formName" name="name" required placeholder="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formEmail">Email Address</label>
+                                        <input type="email" id="formEmail" name="email" required
+                                            placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formSubject">Subject</label>
+                                    <input type="text" id="formSubject" name="subject" required
+                                        placeholder="Internship Opportunity / Project Inquiry">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formMessage">Message</label>
+                                    <textarea id="formMessage" name="message" rows="5" required
+                                        placeholder="Hi Lakshmana, I came across your portfolio and would like to discuss..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-submit">
+                                    <span>Send Message</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="icon-send">
+                                        <line x1="22" y1="2" x2="11" y2="13" />
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Resume.pdf Viewer -->
+            <div class="window" id="win-resume" data-app="resume"
+                style="width: 850px; height: 560px; left: 10%; top: 10%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">📄</span>
+                        <span class="window-title-text">Resume.pdf - Document Viewer</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <a href="resume.pdf" download="Lakshmana_Perumal_Resume.pdf" class="win-btn pdf-download-btn"
+                            title="Download Resume" aria-label="Download Document">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body pdf-document-theme">
+                    <div class="pdf-viewer-bar">
+                        <div class="pdf-controls">
+                            <span class="pdf-page-indicator">Page 1 of 1</span>
+                            <span class="pdf-zoom">100%</span>
+                            <div class="pdf-file-info">Lakshmana_Perumal_Resume.pdf</div>
+                        </div>
+                    </div>
+
+                    <div class="pdf-page-sheet pdf-resume-sheet">
+                        <div class="pdf-embedded-container">
+                            <iframe src="resume.pdf" class="pdf-iframe-element"
+                                title="Resume Document Content"></iframe>
+                            <div class="pdf-fallback-content">
+                                <h2>Lakshmana Perumal M</h2>
+                                <p>Aspiring Blockchain Developer | CSE Student | Full Stack Learner</p>
+                                <hr>
+                                <p>If the PDF does not display in your browser, click the download icon above or the
+                                    button below to retrieve the document.</p>
+                                <a href="resume.pdf" download="Lakshmana_Perumal_Resume.pdf" class="btn btn-primary">
+                                    <span>Download Resume (PDF)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+            <!-- WINDOW: Terminal.exe -->
+            <div class="window" id="win-terminal" data-app="terminal"
+                style="width: 780px; height: 450px; left: 16%; top: 16%;">
+                <div class="window-header">
+                    <div class="window-title-bar">
+                        <span class="window-title-icon">🐚</span>
+                        <span class="window-title-text">Terminal.exe</span>
+                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
+                                class="sw-bar"></span></div>
+                    </div>
+                    <div class="window-controls">
+                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
+                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
+                        <button class="win-btn win-close" aria-label="Close Window"></button>
+                    </div>
+                </div>
+                <div class="window-body terminal-body">
+                    <div class="terminal-history" id="terminal-history">
+                        <div class="terminal-line">LAKSHMANA_WORKSTATION [Version 2.0.26]</div>
+                        <div class="terminal-line">Simulated terminal shell environment. Type <span
+                                class="term-highlight">help</span> for available commands.</div>
+                        <div class="terminal-line">All folder executions are connected directly to the workstation GUI
+                            shell.</div>
+                        <div class="terminal-line">&nbsp;</div>
+                    </div>
+                    <form class="terminal-input-line" id="terminal-form">
+                        <span class="terminal-prompt">guest@lakshmana-os:~$</span>
+                        <input type="text" id="terminal-input" autocomplete="off" autofocus
+                            aria-label="Terminal Input Command">
+                    </form>
+                </div>
+                <div class="window-resizer resizer-e"></div>
+                <div class="window-resizer resizer-s"></div>
+                <div class="window-resizer resizer-se"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Taskbar -->
+    <footer id="taskbar">
+        <!-- Start Button -->
+        <button class="taskbar-btn" id="start-btn" aria-label="Open Start Menu">
+            <span class="start-icon">❖</span>
+            <span class="start-text">Start</span>
+        </button>
+
+        <!-- Taskbar Layout Manager Button -->
+        <button class="taskbar-btn" id="layout-btn" title="Manage windows layout" aria-label="Windows layout manager">
+            <span class="layout-icon">⊞</span>
+            <span class="layout-text">Layout</span>
+        </button>
+
+        <!-- Vertical divider -->
+        <div class="taskbar-divider"></div>
+
+        <!-- Running Apps Section -->
+        <div class="taskbar-apps" id="taskbar-apps"></div>
+
+        <!-- System Tray -->
+        <div class="system-tray">
+            <!-- Sound-inspired wave visual toggle -->
+            <button class="tray-icon" id="tray-audio" title="Mute/Unmute UI visual sound feedback"
+                aria-label="Toggle UI visual click ripples">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tray-svg">
+                    <path d="M12 2v20M17 5v14M22 9v6M7 9v6M2 10v4"></path>
+                </svg>
+            </button>
+
+            <!-- Theme accent customizer -->
+            <button class="tray-icon" id="tray-theme" title="Change color accent theme"
+                aria-label="Change desktop accent color">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tray-svg">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                </svg>
+            </button>
+
+            <!-- Wi-Fi status -->
+            <div class="tray-icon" title="System Connection Secure" aria-label="Wi-Fi status secure">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="tray-svg">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                </svg>
+            </div>
+
+            <div class="taskbar-divider"></div>
+
+            <!-- Real-time Clock -->
+            <div class="tray-clock" id="tray-clock" title="Date & Time" aria-label="System Clock and Date">
+                <span class="clock-time">00:00 AM</span>
+                <span class="clock-date">06/24/2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Start Menu Drawer -->
+    <div id="start-menu">
+        <div class="start-sidebar">
+            <div class="start-avatar">
+                <img src="profile.jpg" alt="Lakshmana Perumal" class="start-avatar-img">
+            </div>
+            <div class="start-user-info">
+                <div class="start-username">Lakshmana P.</div>
+                <div class="start-userstatus">System Admin</div>
+            </div>
+        </div>
+        <div class="start-content">
+            <div class="start-section-title">Quick Programs</div>
+            <div class="start-programs-grid">
+                <button class="start-item" data-app="profile">
+                    <span class="start-item-icon">👤</span>
+                    <span class="start-item-text">Profile.exe</span>
+                </button>
+                <button class="start-item" data-app="skills">
+                    <span class="start-item-icon">💻</span>
+                    <span class="start-item-text">Skills.exe</span>
+                </button>
+                <button class="start-item" data-app="projects">
+                    <span class="start-item-icon">📂</span>
+                    <span class="start-item-text">Projects.exe</span>
+                </button>
+                <button class="start-item" data-app="experience">
+                    <span class="start-item-icon">💼</span>
+                    <span class="start-item-text">Experience.exe</span>
+                </button>
+                <button class="start-item" data-app="education">
+                    <span class="start-item-icon">🎓</span>
+                    <span class="start-item-text">Education.exe</span>
+                </button>
+                <button class="start-item" data-app="blockchain">
+                    <span class="start-item-icon">⛓️</span>
+                    <span class="start-item-text">Blockchain.exe</span>
+                </button>
+                <button class="start-item" data-app="roadmap">
+                    <span class="start-item-icon">🗺️</span>
+                    <span class="start-item-text">Roadmap.exe</span>
+                </button>
+                <button class="start-item" data-app="achievements">
+                    <span class="start-item-icon">🏆</span>
+                    <span class="start-item-text">Achievements.exe</span>
+                </button>
+                <button class="start-item" data-app="contact">
+                    <span class="start-item-icon">✉️</span>
+                    <span class="start-item-text">Contact.exe</span>
+                </button>
+                <button class="start-item" data-app="terminal">
+                    <span class="start-item-icon">🐚</span>
+                    <span class="start-item-text">Terminal.exe</span>
+                </button>
+            </div>
+
+            <div class="start-section-title">External Links</div>
+            <div class="start-links-list">
+                <a href="https://github.com/Lakshmana16108" target="_blank" rel="noopener noreferrer"
+                    class="start-link-item">
+                    <span class="start-link-icon">🐙</span>
+                    <span>GitHub Profile</span>
+                </a>
+                <a href="https://www.linkedin.com/in/m-lakshmana-p-24320b300" target="_blank" rel="noopener noreferrer"
+                    class="start-link-item">
+                    <span class="start-link-icon">🔗</span>
+                    <span>LinkedIn Connection</span>
+                </a>
+            </div>
+
+            <div class="start-footer">
+                <button class="start-sys-btn" id="start-btn-restart">
+                    <span class="sys-icon">🔄</span>
+                    <span>Restart UI</span>
+                </button>
+                <button class="start-sys-btn" id="start-btn-shutdown">
+                    <span class="sys-icon">⏻</span>
+                    <span>Shutdown</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layout Manager Dropdown Popup -->
+    <div class="theme-customizer-popup" id="layout-tray-popup">
+        <div class="theme-customizer-title">Layout Manager</div>
+        <button class="theme-option" id="layout-tile">
+            <span class="sys-icon">⊞</span> Tile Windows
+        </button>
+        <button class="theme-option" id="layout-cascade">
+            <span class="sys-icon">❐</span> Cascade Windows
+        </button>
+        <button class="theme-option" id="layout-minimize-all">
+            <span class="sys-icon">⚊</span> Minimize All
+        </button>
+        <button class="theme-option" id="layout-restore-all">
+            <span class="sys-icon">➕</span> Restore All
+        </button>
+    </div>
+
+    <!-- Shutdown / Overlay screen -->
+    <div id="shutdown-screen">
+        <div class="shutdown-container">
+            <div class="shutdown-text">SHUTTING DOWN WORKSTATION...</div>
+            <div class="shutdown-sub">System offline. It is now safe to close your browser window.</div>
+            <button class="btn btn-primary" id="btn-reboot" style="margin-top: 30px;">
+                <span>Power On / Reboot</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification System -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Core OS Logic Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
