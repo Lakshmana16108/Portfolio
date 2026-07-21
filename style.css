@@ -3694,43 +3694,33 @@ body.os-env {
    LAKSHMANA OS - MOBILE RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-@media screen and (max-width: 768px) {
-    body.os-env {
-        /* Optimize screen real-estate */
-    }
-
+/* Tablet & Mobile Breakpoints (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
     #desktop {
         height: calc(100vh - 50px);
     }
 
-    /* Stack desktop icons in columns/rows naturally */
+    /* Expand cards grid to fill screen width */
+    .desktop-layout-container {
+        inset: 12px;
+        height: calc(100% - 24px);
+    }
+
     .desktop-grid {
         position: static;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        max-height: none;
         width: 100%;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         grid-auto-rows: 145px;
-        grid-auto-flow: row;
-        gap: 20px;
-        align-content: space-evenly;
-        justify-content: space-evenly;
+        gap: 16px;
+        padding-right: 0;
     }
 
-    .desktop-icon {
-        width: 85px;
-        height: 90px;
-    }
-
-    /* Hide clock/widgets layer on mobile */
-    .desktop-widgets {
+    /* Hide clock/widgets panel to save space */
+    .desktop-widgets-panel {
         display: none !important;
     }
 
-    /* Make windows automatically fill the screen on mobile (like mobile apps!) */
+    /* Make windows automatically fill the screen on tablet/mobile */
     .window {
         left: 0 !important;
         top: 0 !important;
@@ -3745,7 +3735,7 @@ body.os-env {
         padding: 0 12px;
     }
 
-    /* Hide resizer controls on mobile */
+    /* Hide resizer controls */
     .window-resizer {
         display: none !important;
     }
@@ -3827,6 +3817,108 @@ body.os-env {
 
     .pdf-viewer-bar .pdf-file-info {
         display: none;
+    }
+}
+
+/* Medium Tablets & Below (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .desktop-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    /* Stack interior layouts */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .about-stats-container {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Disable PDF Iframe for better mobile performance and show fallback download button */
+    .pdf-iframe-element {
+        display: none !important;
+    }
+    .pdf-fallback-content {
+        display: flex !important;
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .desktop-grid {
+        grid-template-columns: 1fr; /* Stack desktop icons vertically for readability */
+        grid-auto-rows: auto;
+        gap: 16px;
+        padding-bottom: 24px;
+    }
+
+    .app-card {
+        height: auto;
+        min-height: 120px;
+    }
+
+    /* Hide layout manager button on taskbar to save space */
+    #layout-btn {
+        display: none !important;
+    }
+    .taskbar-divider {
+        display: none !important;
+    }
+
+    /* Scale down hero typography inside Profile app window */
+    .win-hero-container .hero-title {
+        font-size: 2rem !important;
+    }
+    .win-hero-container .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+    .hero-identity-sub {
+        font-size: 0.8rem !important;
+    }
+    .win-hero-container .hero-description {
+        font-size: 0.85rem !important;
+    }
+
+    /* General responsive font size reductions */
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+    .section-tagline {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Small Mobile Screens (max-width: 320px) */
+@media screen and (max-width: 320px) {
+    .win-hero-container .hero-title {
+        font-size: 1.6rem !important;
+    }
+    .win-hero-container .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+    .window-body {
+        padding: 12px;
+    }
+    .taskbar-btn {
+        padding: 4px 6px;
+    }
+    .start-content {
+        padding: 12px;
     }
 }
 

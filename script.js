@@ -340,7 +340,7 @@ function initDesktopIcons() {
 
         // Card select / open behaviors
         card.addEventListener('click', (e) => {
-            const isMobile = window.innerWidth <= 768;
+            const isMobile = window.innerWidth <= 1024;
             e.stopPropagation();
 
             if (isMobile) {
@@ -353,7 +353,7 @@ function initDesktopIcons() {
 
         // Double click launches on desktop
         card.addEventListener('dblclick', (e) => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 1024) {
                 e.preventDefault();
                 openWindow(appId);
                 card.classList.remove('selected');
@@ -424,7 +424,7 @@ function initWindowManager() {
 
         if (header) {
             header.addEventListener('dblclick', (e) => {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 1024) {
                     toggleMaximizeWindow(appId);
                 }
             });
@@ -461,7 +461,7 @@ function openWindow(appId) {
         setTimeout(() => showSystemNotification("Internship Experience Loaded", "success"), 500);
     }
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
         win.classList.add('maximized-window');
     }
 }
@@ -581,7 +581,7 @@ function makeWindowDraggable(win) {
     header.ontouchstart = dragTouchStart;
 
     function dragMouseDown(e) {
-        if (win.classList.contains('maximized-window') || window.innerWidth <= 768) return;
+        if (win.classList.contains('maximized-window') || window.innerWidth <= 1024) return;
 
         e.preventDefault();
         focusWindow(win.getAttribute('data-app'));
@@ -594,7 +594,7 @@ function makeWindowDraggable(win) {
     }
 
     function dragTouchStart(e) {
-        if (win.classList.contains('maximized-window') || window.innerWidth <= 768) return;
+        if (win.classList.contains('maximized-window') || window.innerWidth <= 1024) return;
 
         focusWindow(win.getAttribute('data-app'));
 
@@ -668,7 +668,7 @@ function makeWindowResizable(win) {
         resizer.addEventListener('touchstart', initTouchResize, { passive: true });
 
         function initResize(e) {
-            if (win.classList.contains('maximized-window') || window.innerWidth <= 768) return;
+            if (win.classList.contains('maximized-window') || window.innerWidth <= 1024) return;
             e.preventDefault();
             e.stopPropagation();
 
@@ -677,7 +677,7 @@ function makeWindowResizable(win) {
         }
 
         function initTouchResize(e) {
-            if (win.classList.contains('maximized-window') || window.innerWidth <= 768) return;
+            if (win.classList.contains('maximized-window') || window.innerWidth <= 1024) return;
             e.stopPropagation();
 
             window.addEventListener('touchmove', StartTouchResize);
@@ -1123,7 +1123,7 @@ function initInteractiveCanvas() {
 
     // Dynamic node parameters
     const nodes = [];
-    const maxNodes = window.innerWidth < 768 ? 25 : 60;
+    const maxNodes = window.innerWidth < 1024 ? 25 : 60;
     const connectionDist = 115;
     const mouse = { x: null, y: null, radius: 170 }; // Large mouse area for web-mesh effect
 
