@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initDesktopIcons();
     initStartMenu();
     initSystemTray();
-    initTerminal();
     
     // 3. New Workstation Additions
     initHardwareMonitors();
@@ -187,7 +186,6 @@ function initBIOSBoot() {
                     startupScreen.style.display = 'none';
                     // Open default workspace apps
                     openWindow('profile');
-                    setTimeout(() => openWindow('terminal'), 400);
                     
                     // Start canvas blockchain nodes mesh wallpaper
                     initInteractiveCanvas();
@@ -527,11 +525,6 @@ function focusWindow(appId) {
     document.querySelectorAll('.taskbar-app-tab').forEach(t => t.classList.remove('active-tab'));
     const tab = document.getElementById(`tab-${appId}`);
     if (tab) tab.classList.add('active-tab');
-
-    if (appId === 'terminal') {
-        const termInput = document.getElementById('terminal-input');
-        if (termInput) setTimeout(() => termInput.focus(), 100);
-    }
 }
 
 // 6. Taskbar Tab Manager
@@ -1109,143 +1102,6 @@ function showSystemNotification(message, type = 'info') {
     }, 4500);
 }
 
-/* ==========================================================================
-   N. TERMINAL COMMAND LAUNCHER & INTERPRETER
-   ========================================================================== */
-function initTerminal() {
-    const termForm = document.getElementById('terminal-form');
-    const termInput = document.getElementById('terminal-input');
-    const termHistory = document.getElementById('terminal-history');
-
-    if (!termForm || !termInput || !termHistory) return;
-
-    termForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const fullCmd = termInput.value.trim();
-        termInput.value = '';
-
-        if (fullCmd === '') return;
-
-        appendTerminalLine(`guest@lakshmana-os:~$ ${fullCmd}`, 'command');
-
-        const tokens = fullCmd.split(' ');
-        const cmd = tokens[0].toLowerCase();
-        const arg = tokens.slice(1).join(' ').toLowerCase();
-
-        interpretCommand(cmd, arg);
-    });
-
-    function appendTerminalLine(text, type = '') {
-        const line = document.createElement('div');
-        line.className = 'terminal-line';
-        
-        if (type === 'command') {
-            line.innerHTML = `<span class="terminal-prompt">guest@lakshmana-os:~$</span> ${text.replace('guest@lakshmana-os:~$ ', '')}`;
-        } else if (type === 'highlight') {
-            line.className = 'terminal-line term-highlight';
-            line.textContent = text;
-        } else if (type === 'error') {
-            line.className = 'terminal-line term-error';
-            line.textContent = text;
-        } else if (type === 'success') {
-            line.className = 'terminal-line term-success';
-            line.textContent = text;
-        } else {
-            line.innerHTML = text;
-        }
-
-        termHistory.appendChild(line);
-        while (termHistory.childNodes.length > 150) {
-            termHistory.removeChild(termHistory.firstChild);
-        }
-        
-        const body = termHistory.parentElement;
-        body.scrollTop = body.scrollHeight;
-    }
-
-    function interpretCommand(cmd, arg) {
-        // List of commands that correspond to GUI applications!
-        const guiApps = ['about', 'profile', 'skills', 'projects', 'experience', 'education', 'certifications', 'resume', 'contact', 'blockchain', 'roadmap', 'achievements'];
-
-        if (guiApps.includes(cmd)) {
-            // Map commands to DOM app IDs
-            let appId = cmd;
-            if (cmd === 'about') appId = 'profile';
-            if (cmd === 'certifications') appId = 'certifications';
-
-            appendTerminalLine(`[SHELL] Executing ${appId}.exe ... Launching window.`, 'success');
-            openWindow(appId);
-            return;
-        }
-
-        switch (cmd) {
-            case 'help':
-                appendTerminalLine("LAKSHMANA_WORKSTATION WORKSPACE SHELL:");
-                appendTerminalLine("  <span class='term-highlight'>help</span>           - Lists workstation shell commands.");
-                appendTerminalLine("  <span class='term-highlight'>about</span> / <span class='term-highlight'>profile</span>  - Launches the Profile.exe app.");
-                appendTerminalLine("  <span class='term-highlight'>skills</span>         - Launches the Skills.exe app.");
-                appendTerminalLine("  <span class='term-highlight'>projects</span>       - Launches the Projects.exe app.");
-                appendTerminalLine("  <span class='term-highlight'>experience</span>     - Launches the Experience.exe app.");
-                appendTerminalLine("  <span class='term-highlight'>education</span>      - Launches the Education.exe app.");
-                appendTerminalLine("  <span class='term-highlight'>blockchain</span>     - Launches the Blockchain.exe Dashboard.");
-                appendTerminalLine("  <span class='term-highlight'>roadmap</span>        - Launches the Roadmap.exe roadmap.");
-                appendTerminalLine("  <span class='term-highlight'>achievements</span>   - Launches the Achievements.exe milestone app.");
-                appendTerminalLine("  <span class='term-highlight'>certifications</span> - Launches the Certificates.pdf document.");
-                appendTerminalLine("  <span class='term-highlight'>resume</span>         - Launches the Resume.pdf document viewer.");
-                appendTerminalLine("  <span class='term-highlight'>contact</span>        - Launches the Contact.exe mailing portal.");
-                appendTerminalLine("  <span class='term-highlight'>neofetch</span>       - Displays hardware workstation logs and specs.");
-                appendTerminalLine("  <span class='term-highlight'>theme [color]</span>  - Swings system accent theme (indigo/cyan/purple/green).");
-                appendTerminalLine("  <span class='term-highlight'>clear</span>          - Clears shell terminal logs.");
-                appendTerminalLine("  <span class='term-highlight'>exit</span>           - Exits/closes this terminal shell.");
-                break;
-
-            case 'neofetch':
-                const screenRes = `${window.innerWidth}x${window.innerHeight}`;
-                const uptime = Math.floor(performance.now() / 1000);
-                
-                const asciiLogo = `
-<pre style="color: var(--color-cyan); font-family: 'Fira Code', monospace; line-height: 1.2; font-size: 0.75rem;">
-   /▓▓▓▓▓▓▓▓▓▓▓▓▓\\       <b>guest@lakshmana-workstation</b>
-  /▓▓/         \\▓▓\\      ---------------------------
- ▓▓/  /▓▓▓▓▓▓\\  \\▓▓      <b>OS</b>: Lakshmana Workstation OS v2.0.26
- ▓▓  /▓▓/   \\▓▓\\ ▓▓      <b>Identity</b>: Aspiring Blockchain Developer
- ▓▓  ▓▓      ▓▓  ▓▓      <b>Focus</b>: CSE Student | Web3 Enthusiast
- ▓▓  ▓▓▓▓▓▓▓▓▓▓  ▓▓      <b>Uptime</b>: ${uptime}s
- ▓▓  ▓▓      ▓▓  ▓▓      <b>Resolution</b>: ${screenRes}
- ▓▓  ▓▓      ▓▓  ▓▓      <b>Theme</b>: ${activeTheme.toUpperCase()}
- \\▓▓\\▓▓\\     ▓▓  /▓      <b>Shell</b>: bash-simulated terminal shell
-  \\▓▓▓▓▓▓▓▓▓▓▓▓▓/        <b>Developer</b>: Lakshmana Perumal
-</pre>
-`;
-                appendTerminalLine(asciiLogo);
-                break;
-
-            case 'theme':
-                if (!arg) {
-                    appendTerminalLine("Error: Please specify theme. Usage: theme [indigo/cyan/purple/green]", "error");
-                } else if (['indigo', 'cyan', 'purple', 'green'].includes(arg)) {
-                    changeTheme(arg);
-                    appendTerminalLine(`System theme switched to: ${arg}`, "success");
-                } else {
-                    appendTerminalLine(`Unknown theme: ${arg}. Options: indigo, cyan, purple, green.`, "error");
-                }
-                break;
-
-            case 'clear':
-                termHistory.innerHTML = '';
-                break;
-
-            case 'exit':
-                closeWindow('terminal');
-                break;
-
-            default:
-                playSound('error');
-                appendTerminalLine(`shell: command not found: ${cmd}. Type 'help' for shell commands.`, "error");
-        }
-    }
-}
 
 /* ==========================================================================
    O. INTERACTIVE BLOCKCHAIN NODE NETWORK CANVAS WALLPAPER

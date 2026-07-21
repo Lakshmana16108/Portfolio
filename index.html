@@ -241,24 +241,7 @@
                     <button class="app-card-btn" aria-label="Launch Contact app">RUN_APP</button>
                 </div>
 
-                <!-- Terminal.exe -->
-                <div class="app-card" data-app="terminal">
-                    <div class="app-card-header">
-                        <div class="app-card-icon icon-gradient-dark">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="4 17 10 11 4 5"></polyline>
-                                <line x1="12" y1="19" x2="20" y2="19"></line>
-                            </svg>
-                        </div>
-                        <span class="app-card-dot status-active" title="System Ready"></span>
-                    </div>
-                    <div class="app-card-body">
-                        <h3 class="app-card-title">Terminal.exe</h3>
-                        <p class="app-card-desc">Interactive developer command-line terminal shell prompt.</p>
-                    </div>
-                    <button class="app-card-btn" aria-label="Launch Terminal app">RUN_APP</button>
-                </div>
+
             </div>
 
             <!-- Right Side: Dynamic Widgets Panel -->
@@ -342,7 +325,7 @@
                             <div class="log-row">[INFO] Mount dev/sda1 successful.</div>
                             <div class="log-row">[SECURE] Port 8000 firewall listening.</div>
                             <div class="log-row">[USER] Recruiter connection established.</div>
-                            <div class="log-row">[NOTIF] Type 'help' in Terminal.exe.</div>
+                            <div class="log-row">[INFO] All workstation systems online.</div>
                         </div>
                     </div>
                 </div>
@@ -1000,17 +983,12 @@
                                     <span class="step-label">Web Dev</span>
                                     <div class="step-tooltip">HTML, CSS, JS, UI Responsive layouts</div>
                                 </div>
-                                <div class="step-node completed" data-step="3">
-                                    <div class="step-circle">✓</div>
-                                    <span class="step-label">Full Stack</span>
-                                    <div class="step-tooltip">Spring Boot, REST APIs, Relational SQL</div>
-                                </div>
-                                <div class="step-node active" data-step="4">
+                                <div class="step-node active" data-step="3">
                                     <div class="step-circle">⚡</div>
                                     <span class="step-label">Blockchain</span>
                                     <div class="step-tooltip">Solidity, Smart Contracts, EVM execution</div>
                                 </div>
-                                <div class="step-node upcoming" data-step="5">
+                                <div class="step-node upcoming" data-step="4">
                                     <div class="step-circle">☐</div>
                                     <span class="step-label">Web3</span>
                                     <div class="step-tooltip">Decentralized Apps, auditing, DeFi protocols</div>
@@ -1564,41 +1542,7 @@
                 <div class="window-resizer resizer-se"></div>
             </div>
 
-            <!-- WINDOW: Terminal.exe -->
-            <div class="window" id="win-terminal" data-app="terminal"
-                style="width: 780px; height: 450px; left: 16%; top: 16%;">
-                <div class="window-header">
-                    <div class="window-title-bar">
-                        <span class="window-title-icon">🐚</span>
-                        <span class="window-title-text">Terminal.exe</span>
-                        <div class="sound-wave-visual"><span class="sw-bar"></span><span class="sw-bar"></span><span
-                                class="sw-bar"></span></div>
-                    </div>
-                    <div class="window-controls">
-                        <button class="win-btn win-minimize" aria-label="Minimize Window"></button>
-                        <button class="win-btn win-maximize" aria-label="Maximize Window"></button>
-                        <button class="win-btn win-close" aria-label="Close Window"></button>
-                    </div>
-                </div>
-                <div class="window-body terminal-body">
-                    <div class="terminal-history" id="terminal-history">
-                        <div class="terminal-line">LAKSHMANA_WORKSTATION [Version 2.0.26]</div>
-                        <div class="terminal-line">Simulated terminal shell environment. Type <span
-                                class="term-highlight">help</span> for available commands.</div>
-                        <div class="terminal-line">All folder executions are connected directly to the workstation GUI
-                            shell.</div>
-                        <div class="terminal-line">&nbsp;</div>
-                    </div>
-                    <form class="terminal-input-line" id="terminal-form">
-                        <span class="terminal-prompt">guest@lakshmana-os:~$</span>
-                        <input type="text" id="terminal-input" autocomplete="off" autofocus
-                            aria-label="Terminal Input Command">
-                    </form>
-                </div>
-                <div class="window-resizer resizer-e"></div>
-                <div class="window-resizer resizer-s"></div>
-                <div class="window-resizer resizer-se"></div>
-            </div>
+
 
         </div>
     </div>
@@ -1717,10 +1661,6 @@
                 <button class="start-item" data-app="contact">
                     <span class="start-item-icon">✉️</span>
                     <span class="start-item-text">Contact.exe</span>
-                </button>
-                <button class="start-item" data-app="terminal">
-                    <span class="start-item-icon">🐚</span>
-                    <span class="start-item-text">Terminal.exe</span>
                 </button>
             </div>
 
